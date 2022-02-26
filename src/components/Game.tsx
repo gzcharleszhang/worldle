@@ -24,7 +24,8 @@ import { useCountry } from "../hooks/useCountry";
 import { Twemoji } from "@teuteuf/react-emoji-render";
 
 function getDayString() {
-  return DateTime.now().toFormat("yyyy-MM-dd");
+  // new country every refresh
+  return DateTime.now().toISO();
 }
 
 const MAX_TRY_COUNT = 6;
