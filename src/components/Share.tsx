@@ -61,7 +61,7 @@ export function Share({
       .join("\n");
 
     return [title, guessString, "https://worldle.teuteuf.fr"].join("\n");
-  }, [dayString, guesses, hideImageMode, rotationMode, theme]);
+  }, [guesses, hideImageMode, rotationMode, theme]);
 
   return (
     <CopyToClipboard
