@@ -36,11 +36,11 @@ export function Share({
     const win = guesses[guesses.length - 1]?.distance === 0;
     const bestDistance = Math.min(...guesses.map(({ distance }) => distance));
     const guessCount = win ? guesses.length : "X";
-    const dayCount = Math.floor(
-      Interval.fromDateTimes(START_DATE, DateTime.fromISO(dayString)).length(
-        "day"
-      )
-    );
+    // const dayCount = Math.floor(
+    //   Interval.fromDateTimes(START_DATE, DateTime.fromISO(dayString)).length(
+    //     "day"
+    //   )
+    // );
     const difficultyModifierEmoji = hideImageMode
       ? " 🙈"
       : rotationMode
