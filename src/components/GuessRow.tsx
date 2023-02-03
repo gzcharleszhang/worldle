@@ -60,7 +60,7 @@ export function GuessRow({
           className={`col-span-7 h-8 bg-gray-200 dark:bg-slate-600`}
         />
       );
-    case "ENDED":
+    case "RUNNING":
       return (
         <>
           <div
@@ -87,7 +87,7 @@ export function GuessRow({
           </div>
         </>
       );
-    case "RUNNING":
+    case "ENDED":
       return (
         <>
           <div className="flex items-center justify-center border-2 h-8 col-span-3 animate-reveal">
