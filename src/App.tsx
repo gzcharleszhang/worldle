@@ -11,7 +11,7 @@ import { Worldle } from "./components/Worldle";
 import { Stats } from "./components/panels/Stats";
 import { useReactPWAInstall } from "@teuteuf/react-pwa-install";
 import { InstallButton } from "./components/InstallButton";
-import { Twemoji } from "@teuteuf/react-emoji-render";
+import { Emojione } from "@teuteuf/react-emoji-render";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -74,7 +74,7 @@ function App() {
               type="button"
               onClick={() => setInfoOpen(true)}
             >
-              <Twemoji text="❓" />
+              <Emojione text="❓" />
             </button>
             {supported() && !isInstalled() && (
               <InstallButton pwaInstall={pwaInstall} />
@@ -87,19 +87,19 @@ function App() {
               type="button"
               onClick={() => setStatsOpen(true)}
             >
-              <Twemoji text="📈" />
+              <Emojione text="📈" />
             </button>
             <button
               className="ml-3 text-xl"
               type="button"
               onClick={() => setSettingsOpen(true)}
             >
-              <Twemoji text="⚙️" />
+              <Emojione text="⚙️" />
             </button>
           </header>
           <Game settingsData={settingsData} />
           <footer className="flex justify-center items-center text-sm mt-8 mb-1">
-            <Twemoji
+            <Emojione
               text="❤️"
               className="flex items-center justify-center mr-1"
             />{" "}
@@ -111,7 +111,7 @@ function App() {
               rel="noopener noreferrer"
             >
               <div className="w-max">
-                <Twemoji
+                <Emojione
                   text={t("buyMeACoffee")}
                   options={{ className: "inline-block" }}
                 />

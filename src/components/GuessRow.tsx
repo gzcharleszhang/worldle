@@ -8,7 +8,7 @@ import { Guess } from "../domain/guess";
 import React, { useCallback, useEffect, useState } from "react";
 import CountUp from "react-countup";
 import { SettingsData } from "../hooks/useSettings";
-import { Twemoji } from "@teuteuf/react-emoji-render";
+import { Emojione } from "@teuteuf/react-emoji-render";
 
 const SQUARE_ANIMATION_LENGTH = 250;
 type AnimationState = "NOT_STARTED" | "RUNNING" | "ENDED";
@@ -60,7 +60,7 @@ export function GuessRow({
           className={`col-span-7 h-8 bg-gray-200 dark:bg-slate-600`}
         />
       );
-    case "RUNNING":
+    case "ENDED":
       return (
         <>
           <div
@@ -74,7 +74,7 @@ export function GuessRow({
                   animationDelay: `${SQUARE_ANIMATION_LENGTH * index}ms`,
                 }}
               >
-                <Twemoji text={character} />
+                {character}
               </div>
             ))}
           </div>
@@ -87,7 +87,7 @@ export function GuessRow({
           </div>
         </>
       );
-    case "ENDED":
+    case "RUNNING":
       return (
         <>
           <div className="flex items-center justify-center border-2 h-8 col-span-3 animate-reveal">
@@ -99,7 +99,7 @@ export function GuessRow({
             {guess && formatDistance(guess.distance, distanceUnit)}
           </div>
           <div className="flex items-center justify-center border-2 h-8 col-span-1 animate-reveal">
-            {guess && <Twemoji text={getDirectionEmoji(guess)} />}
+            {guess && <Emojione text={getDirectionEmoji(guess)} />}
           </div>
           <div className="flex items-center justify-center border-2 h-8 col-span-1 animate-reveal animate-pop">
             {`${proximity}%`}

@@ -21,7 +21,7 @@ import { useTranslation } from "react-i18next";
 import { SettingsData } from "../hooks/useSettings";
 import { useMode } from "../hooks/useMode";
 import { useCountry } from "../hooks/useCountry";
-import { Twemoji } from "@teuteuf/react-emoji-render";
+import { Emojione } from "@teuteuf/react-emoji-render";
 
 function getDayString() {
   // new country every refresh
@@ -115,7 +115,7 @@ export function Game({ settingsData }: GameProps) {
           type="button"
           onClick={() => setHideImageMode(false)}
         >
-          <Twemoji
+          <Emojione
             text={t("showCountry")}
             options={{ className: "inline-block" }}
           />
@@ -143,7 +143,7 @@ export function Game({ settingsData }: GameProps) {
           type="button"
           onClick={() => setRotationMode(false)}
         >
-          <Twemoji
+          <Emojione
             text={t("cancelRotation")}
             options={{ className: "inline-block" }}
           />
@@ -174,7 +174,7 @@ export function Game({ settingsData }: GameProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twemoji
+              <Emojione
                 text={t("showOnGoogleMaps")}
                 options={{ className: "inline-block" }}
               />
@@ -192,7 +192,7 @@ export function Game({ settingsData }: GameProps) {
                 className="flex items-center justify-center border-2 uppercase my-0.5 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
                 type="submit"
               >
-                <Twemoji
+                <Emojione
                   text="🌍"
                   options={{ className: "inline-block" }}
                   className="flex items-center justify-center"
